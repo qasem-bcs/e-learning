@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>{% block title %}Online Learning Platform{% endblock %}</title>
+  <link href="{% static "css/base.css" %}" rel="stylesheet">
+  <link href="{% static "fontawesome/css/all.css" %}" rel="stylesheet"> <!--load all styles -->
+
+</head>
+<body>
+  
+  {% block header %}
+  <div id="header">
+    
+    <a href="/" class="logo"><i class="fas fa-university"></i> Online Learning Platform</a>
+    <ul class="menu">
+      {% if request.user.is_authenticated %}
+        <li><a href="{% url "logout" %}"><i class="fas fa-sign-out-alt"></i> Sign out</a></li>
+        <li id="user-name">Welcome, {{ user.get_username }}</li>
+      {% else %}
+        <li><a href="{% url "login" %}">Sign in <i class="fas fa-sign-in-alt"></i></a></li>
+      {% endif %}
+    </ul>
+  </div>
+  {% endblock header %}  
+  <div id="content">
+    {% block content %}
+    {% endblock %}
+  </div>
+
+  <!-- <footer>
+    <p>&copy;Ghalib University</p>
+  </footer> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      {% block domready %}
+      {% endblock %}
+    });
+  </script>
+</body>
+</html>
