@@ -5,13 +5,11 @@
   <meta charset="utf-8" />
   <title>{% block title %}Online Learning Platform{% endblock %}</title>
   <link href="{% static "css/base.css" %}" rel="stylesheet">
-  <link href="{% static "fontawesome/css/all.css" %}" rel="stylesheet"> <!--load all styles -->
-
+  <link href="{% static "fontawesome/css/all.css" %}" rel="stylesheet"> <!--load all styles -->  
 </head>
 <body>
-  
+  {% block header %}
   <div id="header">
-    
     <a href="/" class="logo"><i class="fas fa-university" style="color: #f1faee"></i> Online Learning Platform</a>
     <ul class="menu">
       {% if request.user.is_authenticated %}
@@ -22,15 +20,28 @@
       {% endif %}
     </ul>
   </div>
+  {% endblock %}
+  
 
+<div class="container">
+  {% block content %}
+  {% endblock %}
 
-    {% block content %}
-    {% endblock %}
+</div>
 
+{% block footer %}
+<footer>
+  <p style="padding: 20px;">Copyright &copy; 2022 Ghalib University &#124; All rights reserved</p>
 
-  <!-- <footer>
-    <p>&copy;Ghalib University</p>
-  </footer> -->
+    <ul style="padding-left: 40%; letter-spacing: 5px;">
+      <a href="#"><i class="fab fa-facebook fa-3x"></i></a>
+      <a href="#"><i class="fab fa-twitter fa-3x"></i></a>
+      <a href="#"><i class="fab fa-instagram fa-3x"></i></a>
+    </ul>
+   
+</footer>
+{% endblock footer %}
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
   <script>

@@ -1,7 +1,7 @@
 {% extends "base.html" %}
-  
-{% block title %}Chat room for "{{ course.title }}"{% endblock %}
 
+{% block title %}Chat room for "{{ course.title }}"{% endblock %}
+{% block header %}{% endblock header %}
 {% block content %}
   <div id="chat">
   </div>
@@ -10,6 +10,7 @@
     <input id="chat-message-submit" type="submit" value="Send">
   </div>
 {% endblock %}
+{% block footer %}{% endblock footer %}
 
 {% block domready %}
   var url = 'ws://' + window.location.host +
