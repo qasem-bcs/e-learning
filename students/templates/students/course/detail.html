@@ -32,7 +32,7 @@
       </a>
     </h3>
   </div>
-  <div class="module" style="border-top:20px solid red; border-bottom:20px solid red;">
+  <div class="module">
     {% cache 600 module_contents module %}
       {% for content in module.contents.all %}
         {% with item=content.item %}

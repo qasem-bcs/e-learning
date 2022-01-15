@@ -10,10 +10,9 @@
 </head>
 <body>
   
-  {% block header %}
   <div id="header">
     
-    <a href="/" class="logo"><i class="fas fa-university"></i> Online Learning Platform</a>
+    <a href="/" class="logo"><i class="fas fa-university" style="color: #f1faee"></i> Online Learning Platform</a>
     <ul class="menu">
       {% if request.user.is_authenticated %}
         <li><a href="{% url "logout" %}"><i class="fas fa-sign-out-alt"></i> Sign out</a></li>
@@ -23,11 +22,11 @@
       {% endif %}
     </ul>
   </div>
-  {% endblock header %}  
-  <div id="content">
+
+
     {% block content %}
     {% endblock %}
-  </div>
+
 
   <!-- <footer>
     <p>&copy;Ghalib University</p>

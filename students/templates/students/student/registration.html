@@ -6,10 +6,9 @@
 
 {% block content %}
   <h1>
-    Sign up <i class="fas fa-user-plus"></i>
+    <i class="fas fa-user-plus fa-lg" style="padding-left: 600px;"></i>
   </h1>
-  <div class="module">
-    <p>Enter your details to create an account:</p>
+  <div class="module" style="margin-left: 450px;">
     <form method="post">
       {{ form.as_p }}
       {% csrf_token %}

@@ -2,17 +2,23 @@
 
 html {
     overflow-x: hidden;
-
 }
+
+img {
+    height: 400px;
+    width: 700px;
+}
+
 body {
     margin:0;
     font-family:'Roboto', sans-serif;
     font-weight:400;
     color:#333;
+    background-color: #f1faee;
 }
 
 a {
-    color:#3fad37;
+    color:#e63946;
     text-decoration:none;
 }
 
@@ -26,7 +32,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    background:#efefef;
+    background:#2a9d8f;
+    color: whitesmoke;
     width:100%;
     overflow:auto;
     padding:20px 0 20px 20px;
@@ -36,7 +43,7 @@ h1 {
 .module {
     padding:10px 20px;
     float:left;
-    width:600px;
+    width:700px;
 }
 
 .module h1 {
@@ -53,16 +60,16 @@ h1 {
 
 #header {
     position: relative;
-    background:#303841;
+    background:#264653;
     overflow:auto;
-    height:100px;
+    height:110px;
     max-width:100%;
     padding:10px 20px;
 }
 
 #header .logo {
     text-decoration:none;
-    font-family:'Roboto', sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     font-weight:300;
     text-transform:uppercase;
     font-size:50px;
@@ -89,7 +96,7 @@ h1 {
     width:20%;
     padding:10px;
     float:left;
-    background:#333;
+    background:#2a9d8f;
     color: #fff;
     font-family:'Roboto', sans-serif;
 }
@@ -109,11 +116,11 @@ h1 {
 }
 
 .contents ul li.selected {
-    background:#3f3f3f;
+    background:#264653;
 }
 
 .contents ul li:hover {
-    background:#3f3f3f;
+    background:#264653;
 }
 
 .contents ul span {
@@ -137,7 +144,7 @@ ul.content-types li {
     list-style:none;
     float:left;
     margin:10px;
-    background:#47504c;
+    background:#264653;
     padding:8px 14px;
     border-radius: 5px;
 }
@@ -182,7 +189,7 @@ select {
 
 input[type=submit], a.button {
     border-radius:5px;
-    background:#4dcc43;
+    background:#264653;
     color:#fff;
     font-size:16px;
     text-transform:uppercase;
@@ -198,7 +205,7 @@ a.secondary-button {
 }
 
 input[type=submit]:hover, a.button:hover {
-    background:#3fad37;
+    background:#2a9d8f;
 }
 
 ul#course-modules {
@@ -237,7 +244,7 @@ ul#course-modules li:hover {
 }
 
 #module-contents input[type=submit] {
-    color:#3fad37;
+    color:#e63946;
     background:none;
     margin:-20px 0 0;
     padding:0;
@@ -267,7 +274,7 @@ ul#course-modules li:hover {
 }
 
 #chat {
-    top: 64px;
+    top: 130px;
     bottom:0;
     position:fixed;
     width:100%;
@@ -317,14 +324,4 @@ ul#course-modules li:hover {
     margin-right:2%;
     padding-left:0;
     padding-right:0;
-}
-
-footer {
-    position:fixed;
-    bottom: 0;
-    height:100px;
-    width:100%;
-    background-color: #3f3f3f;
-    color: wheat;
-    text-align: center;
 }
