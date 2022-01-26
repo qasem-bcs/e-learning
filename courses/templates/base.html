@@ -20,11 +20,11 @@
       {% else %}
         <li><a href="{% url "login" %}">Sign in <i class="fas fa-sign-in-alt"></i></a></li>
       {% endif %}
+      <a href="{% url "manage_course_list"%}" style="text-decoration: underline;">Course Management</a>
     </ul>
   </div>
   {% endblock %}
   
-
 <div class="container">
   {% block content %}
   {% endblock %}
@@ -36,7 +36,7 @@
   <p style="padding: 20px;">Copyright &copy; 2022 Ghalib University &#124; All rights reserved</p>
 
     <ul style="padding-left: 40%; letter-spacing: 5px;">
-      <a href="#"><i class="fab fa-facebook fa-3x"></i></a>
+      <a href="https://www.google.com/"><i class="fab fa-facebook fa-3x"></i></a>
       <a href="#"><i class="fab fa-twitter fa-3x"></i></a>
       <a href="#"><i class="fab fa-instagram fa-3x"></i></a>
     </ul>

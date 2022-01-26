@@ -5,16 +5,16 @@
 {% block content %}
   <h1>My courses</h1>
 
-  <div class="module">
+  <div class="module_course_mine">
     {% for course in object_list %}
-      <div class="course-info" style="background-color:aquamarine; border-radius: 5px;">
-        <h3>{{ course.title }}</h3>
+      <div class="course-info" style="background-color:#4267B2; border-radius: 5px;">
+        <h3 style="color: aliceblue; text-transform: uppercase;">{{ course.title }}</h3>
         <p>
-          <a href="{% url "course_edit" course.id %}">Edit</a>
-          <a href="{% url "course_delete" course.id %}">Delete</a>
-          <a href="{% url "course_module_update" course.id %}">Edit modules</a>
+          <a style="text-decoration: underline;" href="{% url "course_edit" course.id %}">Edit</a>
+          <a style="text-decoration: underline;" href="{% url "course_delete" course.id %}">Delete</a>
+          <a style="text-decoration: underline;" href="{% url "course_module_update" course.id %}">Edit modules</a>
           {% if course.modules.count > 0 %}
-            <a href="{% url "module_content_list" course.modules.first.id %}">
+            <a style="text-decoration: underline;" href="{% url "module_content_list" course.modules.first.id %}">
             Manage contents</a>
           {% endif %}
         </p>

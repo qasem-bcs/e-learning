@@ -35,7 +35,7 @@
   <div class="module">
     {% for course in courses %}
       {% with subject=course.subject %}
-      <div class="module" style="border:7px solid #e9c46a; border-radius:5px; margin-bottom:10px;">
+      <div class="module" style="border:7px solid #898F9C; border-radius:5px; margin-bottom:10px;">
         <h1>
           <a href="{% url "course_detail" course.slug %}">
             <i class="fas fa-book"></i> {{ course.title }}

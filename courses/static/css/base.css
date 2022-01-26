@@ -26,7 +26,7 @@ body {
 
 
 a {
-    color:#e63946;
+    color:black;
     text-decoration:none;
 }
 .fa-facebook:hover {
@@ -38,6 +38,8 @@ a {
 .fa-instagram:hover {
     color: turquoise;
 }
+
+
 
 ul {
     float:left;
@@ -51,7 +53,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    background:#2a9d8f;
+    background:#898F9C;
     color: whitesmoke;
     width:100%;
     overflow:auto;
@@ -65,9 +67,16 @@ h1 {
     width:60%;
 }
 
+.module_course_mine {
+    padding:10px 20px;
+    margin-left: 30%;
+    width:60%;
+}
+
+
 
 footer {
-    background-color: #264653;
+    background-color: #898F9C;
     height: 200px;
     clear: both;
     color: white;  
@@ -92,7 +101,7 @@ footer {
 
 #header {
     position: relative;
-    background:#264653;
+    background:#4267B2;
     overflow:auto;
     height:120px;
     max-width:100%;
@@ -102,7 +111,7 @@ footer {
 #header .logo {
     text-decoration:none;
     font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
+    font-weight: 100;
     text-transform:uppercase;
     font-size:50px;
     padding-top: 25px;
@@ -132,7 +141,7 @@ footer {
     width:25%;
     padding:10px;
     float:left;
-    background:#2a9d8f;
+    background:#4267B2;
     color: #fff;
     font-family:'Roboto', sans-serif;
 }
@@ -225,7 +234,7 @@ select {
 
 input[type=submit], a.button {
     border-radius:5px;
-    background:#264653;
+    background:#4267B2;
     color:#fff;
     font-size:16px;
     text-transform:uppercase;
@@ -374,10 +383,21 @@ ul#course-modules li:hover {
     #header .logo {
         font-size:25px;
     }
+    #header {
+        height: 150px;
+    }
     #header .menu {
     padding: 5px;
     clear: both;
     float: left;
 }
+.module_course_mine {
+    padding:10px 20px;
+    margin-left: 10px;
+    float: left;
+    width:60%;
+}
+
+
     
 }
